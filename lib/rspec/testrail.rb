@@ -59,6 +59,7 @@ module RSpec
 
       def testruns
         @testruns ||= client.send_get("get_runs/#{@options[:project_id]}&#{URI.encode_www_form([["suite_id", @options[:suite_id]]])}")
+                            .fetch("cases", [])
                             .select do |run|
                               run['name'].include?(@options[:run_name])
                             end
