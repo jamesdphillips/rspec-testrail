@@ -4,14 +4,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'rspec/testrail/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'rspec-testrail'
+  spec.name          = 'rspec-testrail-jamesdphillips'
   spec.version       = RSpec::Testrail::VERSION
-  spec.authors       = ['Dmitry Zuev']
-  spec.email         = ['d.zuev@rambler-co.ru']
+  spec.authors       = ['James Phillips']
+  spec.email         = ['jamesdphillips@gmail.com']
 
   spec.summary       = 'RSpec integration with TestRail'
   spec.description   = 'rspec-testrail help you update statuses in TestRail app'
-  spec.homepage      = 'https://github.com/dmitryzuev/rspec-testrail'
+  spec.homepage      = 'https://github.com/jamesdphillips/rspec-testrail'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
