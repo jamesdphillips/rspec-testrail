@@ -58,10 +58,9 @@ module RSpec
       end
 
       def testruns
-        @testruns ||= client.send_get("get_runs/#{@options[:project_id]}")
+        @testruns ||= client.send_get("get_runs/#{@options[:project_id]}?suite_id=#{URI.encode_www_form(@options[:suite_id])}")
                             .select do |run|
-                              run['suite_id'] == @options[:suite_id].to_i && \
-                                run['name'].include?(@options[:run_name])
+                              run['name'].include?(@options[:run_name])
                             end
       end
     end
